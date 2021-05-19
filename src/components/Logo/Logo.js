@@ -1,30 +1,44 @@
-import React from 'react'
-import PropTypes from "prop-types";
-import classNames from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import "./Logo.css"
+import './Logo.css';
 
-import { ReactComponent as LogoSvg } from './logo.svg'
+import { ReactComponent as LogoNavySky } from './DestinFWB_Logo__navy sky.svg';
+import { ReactComponent as LogoSeaFoam } from './DestinFWB_Logo__sea_foam_teal.svg';
+import { ReactComponent as LogoWhitewashWhite } from './DestinFWB_Logo__whitewash_white.svg';
+import { ReactComponent as LogoBlack } from './DestinFWB_Logo__black.svg';
 
-const logoClasses = size =>
+const logoClasses = (size, color) =>
   classNames({
     'w-96 h-96': !size || size === 'xl',
     'w-48 h-48': size === 'lg',
-    'w-16 h-16': size === 'md',
-    'w-12 h-12': size === 'sm',
-    'fill-current animate-spin-slow': true
-  })
+    'w-24 h-24': size === 'md',
+    'w-12 h-12': size === 'sm'
+  });
 
-const Logo = ({ size }) => {
+const renderLogo = (color) => {
+  switch (color) {
+    case 'Black':
+      return <LogoBlack />;
+    case 'Navy Sky':
+      return <LogoNavySky />;
+    case 'Whitewash White':
+      return <LogoWhitewashWhite />;
+    default:
+      return <LogoSeaFoam />;
+  }
+}  
 
-  return (      
-    <div className="text-blue-300">
-        <LogoSvg className={logoClasses(size)}/>
+const Logo = ({ size, color }) => {
+  return (
+    <div className={logoClasses(size)}>
+      {renderLogo(color)}
     </div>
-  )
-}
+  );
+};
 
 Logo.protoTypes = {
   size: PropTypes.string,
-}
+};
 export default Logo;

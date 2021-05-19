@@ -5,7 +5,18 @@ export default {
   title: 'Application/Component Library/Logo',
   component: Logo,
   argTypes: {
-      size: {control: 'text'}
+      size: {
+          control: {
+              type: 'inline-radio',
+              options: ['xl', 'lg', 'md', 'sm']
+          },
+      },
+      color: {
+          control: {
+              type: 'inline-radio',
+              options: ['Sea Foam Teal (Primary)','Navy Sky','Whitewash White','Black']
+          }
+      }
   }
 }
 
@@ -13,25 +24,6 @@ const Template = (args) => <Logo {...args}/>
 
 export const Default = Template.bind({})
 Default.args = {
-    size: 'xl'
-}
-
-export const Small = Template.bind({})
-Small.args = {
-    size: 'sm'    
-}
-
-export const Medium = Template.bind({})
-Medium.args = {
-    size: 'md'    
-}
-
-export const Large = Template.bind({})
-Large.args = {
-    size: 'lg'    
-}
-
-export const ExtraLarge = Template.bind({})
-ExtraLarge.args = {
-    size: 'xl'    
+    size: 'lg',
+    color: 'Sea Foam Teal (Primary)'
 }
