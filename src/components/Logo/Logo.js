@@ -14,7 +14,7 @@ const logoClasses = (size, color) =>
     'w-96 h-96': !size || size === 'xl',
     'w-48 h-48': size === 'lg',
     'w-24 h-24': size === 'md',
-    'w-12 h-12': size === 'sm'
+    'w-12 h-12': size === 'sm',
   });
 
 const renderLogo = (color) => {
@@ -28,14 +28,10 @@ const renderLogo = (color) => {
     default:
       return <LogoSeaFoam />;
   }
-}  
+};
 
 const Logo = ({ size, color }) => {
-  return (
-    <div className={logoClasses(size)}>
-      {renderLogo(color)}
-    </div>
-  );
+  return <div className={logoClasses(size)}>{renderLogo(color)}</div>;
 };
 
 Logo.protoTypes = {
