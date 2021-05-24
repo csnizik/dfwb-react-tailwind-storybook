@@ -10,7 +10,6 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
     <div
       class={classNames(
         `w-full`,
-        `md:w-${width}`,
         `rounded-lg`,
         `shadow`,
         `bg-white`,
