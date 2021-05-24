@@ -1,2 +1,3 @@
-import Metric from "./Metric";
+import Metric from './Metric';
+
 export default Metric;
