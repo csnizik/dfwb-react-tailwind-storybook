@@ -10,6 +10,7 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
     <div
       class={classNames(
         `w-full`,
+        `md:w-${width}`,
         `rounded-lg`,
         `shadow`,
         `bg-white`,
@@ -19,7 +20,17 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
       )}
     >
       <div className={classNames(`flex`, `w-full`, `justify-between`)}>
-        <div className={classNames(`pt-4`, `pl-4`, 'flex', 'flex-rox', 'space-x-3', 'justify-center', 'items-start')}>
+        <div
+          className={classNames(
+            `pt-4`,
+            `pl-4`,
+            'flex',
+            'flex-rox',
+            'space-x-3',
+            'justify-center',
+            'items-start'
+          )}
+        >
           <Icon size="Medium" color="Navy Sky" type="Network" />
           <h3
             className={classNames(
@@ -53,10 +64,20 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
           </button>
         </div>
       </div>
-       <div className={classNames('px-10', 'pb-5')}>    
+      <div className={classNames('px-10', 'pb-5')}>
         <div className={classNames('text-gray-500')}>{subheading}</div>
       </div>
-      <div className={classNames('w-full', 'px-10', 'py-5','flex','items-center','justify-center', '-ml-3')}>
+      <div
+        className={classNames(
+          'w-full',
+          'px-10',
+          'py-5',
+          'flex',
+          'items-center',
+          'justify-center',
+          '-ml-3'
+        )}
+      >
         {props.children}
       </div>
     </div>
