@@ -1,11 +1,10 @@
-import Logo from './components/Logo';
-import CallToAction from './components/CallToAction'
+import Icon from './components/01-atoms/images/Icon';
 
 function App() {
   return (
-    <div className={'bg-gray-800 h-screen w-screen container overflow-hidden flex items-center justify-center flex-col'}>
-      <Logo/>
-      <CallToAction/>
+    <div>
+      <h1 className="text-5xl font-serif font-bold tracking-tight">Hello World</h1>
+      <Icon type="MagnifyingGlass" color="Crystal-Clear Teal" size="Large" />
     </div>
   );
 }

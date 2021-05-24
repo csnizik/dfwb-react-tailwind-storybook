@@ -1,0 +1,32 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import './Card.css';
+
+const GridCard = () => {
+  return (
+    <div
+      class={classNames(
+        `w-full`,
+        `rounded-lg`,
+        `shadow`,
+        `bg-white`,
+        `md:space-x-3`,
+        `p-4`,
+        `flex`,
+        `flex-col`,
+        `lg:flex-row`,
+        `mx-auto`,
+        `prose`,
+        `lg:prose-l`
+      )}
+    >
+      {/* TODO: finish doing the columns */}
+      {/* <div className={classNames()}></div> */}
+        Top Markets
+    </div>
+  );
+};
+
+export default GridCard;
