@@ -131,7 +131,7 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          H2 (24px; classes: 'text-2xl', 'font-serif', 'font-bold', '{fontColor(headingColor)}'
+          H2 (24px; classes: 'text-2xl', 'font-serif', 'font-bold', '{fontColor(headingColor)})'
         </p>
         <h2
           className={classNames(
