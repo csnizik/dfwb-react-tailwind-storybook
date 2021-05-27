@@ -1,5 +1,58 @@
-@import "../../../../index.css";
+@import '../../../../index.css';
 
-.bg-navy {
-    background-color: #124168;
+#sidebarMenu {
+  left:0;
+  width: 224px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #sidebarMenu {
+    transition: all 0.3s;
+  }
+  input[type='checkbox']:not(:checked) ~ #sidebarMenu {
+    transform: translate(-150px);
+  }
+  input[type='checkbox']:checked ~ #sidebarMenu {
+    transform: translateX(0);
+  }
+  
+  input[type='checkbox']:not(:checked) ~ #sidebarMenu > #brandLogo {
+    visibility: hidden;
+    
+  }
+
+  input[type='checkbox']:checked ~ #sidebarMenu > #brandLogo {
+    visibility: visible;
+  }
+
+  input[type='checkbox']:checked ~ #sidebarIcon {
+    transition: all 0.3s;
+    transform: rotate(-180deg);
+  }
+
+  input[type='checkbox']:not(checked) ~ ul > li .listItemText {
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ ul > li .listItemText {
+    display: block;
+  }
+
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+  }
+  input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+  }
 }

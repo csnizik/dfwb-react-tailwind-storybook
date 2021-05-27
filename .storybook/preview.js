@@ -1,8 +1,9 @@
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
-    default: 'White',
+    default: 'Gray 200',
     values: [
+      { name: 'Gray 200', value: '#E5E5E5' },
       {
         name: 'White',
         value: '#FFFFFF',
@@ -91,7 +92,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      method: 'alphabetical'
-    }
-  }
+      method: 'alphabetical',
+    },
+  },
 };

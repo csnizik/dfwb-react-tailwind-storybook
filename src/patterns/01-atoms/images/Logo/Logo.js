@@ -8,7 +8,7 @@ import { ReactComponent as DSFWLogo } from './DestinFWBLogo.svg';
 
 const logoClasses = (size) =>
   classNames({
-    'w-96 h-96 max-w-full': !size || size === 'Large',
+    'w-96 h-96 max-w-full max-h-full': !size || size === 'Large',
     'w-48 h-48': size === 'Medium',
     'w-24 h-24': size === 'Small',
   });
@@ -23,7 +23,8 @@ const logoColor = (color) =>
 
 
 const Logo = ({ size = 'Large', color }) => {
-  return <div className={logoClasses(size)}><DSFWLogo className={logoColor(color)}/></div>;
+  return <DSFWLogo className={`${logoColor(color)} ${logoClasses(size)}`}/>;
+
 };
 
 Logo.propTypes = {
