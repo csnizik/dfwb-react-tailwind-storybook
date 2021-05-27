@@ -9,3 +9,6 @@ export default {
 const Template = (args) => <SidebarComponent {...args} />;
 
 export const Sidebar = Template.bind({});
+Sidebar.parameters = {
+    controls: { hideNoControlsWarning: true },
+  };
