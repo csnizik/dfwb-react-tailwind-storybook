@@ -26,7 +26,7 @@ export default {
         ],
       },
       description:
-        'Note: Changing this to "Whitewash White" will also affect the color of the Body text in the preview.',
+        'Note: When previewing light colors, you may want to change the background color using the "Change the background" button, above the preview.',
     },
   },
 };
@@ -77,7 +77,7 @@ const Template = ({ headingText, headingColor }) => {
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
-                : 'text-gray-300'
+                : 'text-navySky'
             }`
           )}
         >
@@ -102,7 +102,7 @@ const Template = ({ headingText, headingColor }) => {
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
-                : 'text-gray-300'
+                : 'text-navySky'
             }`
           )}
         >
@@ -127,7 +127,7 @@ const Template = ({ headingText, headingColor }) => {
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
-                : 'text-gray-300'
+                : 'text-navySky'
             }`
           )}
         >
@@ -152,7 +152,7 @@ const Template = ({ headingText, headingColor }) => {
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
-                : 'text-gray-300'
+                : 'text-navySky'
             }`
           )}
         >
@@ -178,7 +178,7 @@ const Template = ({ headingText, headingColor }) => {
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
-                : 'text-gray-300'
+                : 'text-navySky'
             }`
           )}
         >

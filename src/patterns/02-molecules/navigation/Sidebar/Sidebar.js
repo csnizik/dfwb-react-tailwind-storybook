@@ -79,8 +79,7 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full',
-            'selectedListItem'
+            'rounded-tl-full'
           )}
         >
           <div
@@ -108,8 +107,7 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full',
-            'selectedListItem'
+            'rounded-tl-full'
           )}
         >
           <div
@@ -137,8 +135,7 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full',
-            'selectedListItem'
+            'rounded-tl-full'
           )}
         >
           <div
@@ -166,8 +163,7 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full',
-            'selectedListItem'
+            'rounded-tl-full'
           )}
         >
           <div
