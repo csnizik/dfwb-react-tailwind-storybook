@@ -17,6 +17,7 @@ import { ReactComponent as Play } from './play.svg';
 import { ReactComponent as Pointer } from './pointer.svg';
 import { ReactComponent as SlideLeft } from './slide-left.svg';
 import { ReactComponent as SlideRight } from './slide-right.svg';
+import { ReactComponent as ThreeDots } from './three-dots-vert.svg';
 import { ReactComponent as Video } from './video.svg';
 
 const iconColor = (color) => {
@@ -28,7 +29,7 @@ const iconColor = (color) => {
     case 'Sunset Pink':
       return 'text-pink';
     case 'Sea Foam Teal':
-      return 'text-teal-dark'
+      return 'text-teal-dark';
     case 'Navy Sky':
       return 'text-blue-dark';
     case 'Moss Green':
@@ -186,6 +187,28 @@ const renderIcon = ({ type, size, color }) => {
             'fill-current',
             iconSize(size),
             iconColor(color)
+          )}
+        />
+      );
+    case 'ThreeDots':
+      return (
+        <ThreeDots
+          className={classNames(
+            'fill-current',
+            iconSize(size),
+            iconColor(color)
+          )}
+        />
+      );
+    case 'ThreeDotsHoriz':
+      return (
+        <ThreeDots
+          className={classNames(
+            'fill-current',
+            iconSize(size),
+            iconColor(color),
+            'transform',
+            'rotate-90'
           )}
         />
       );

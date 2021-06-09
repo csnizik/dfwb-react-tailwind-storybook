@@ -3,8 +3,10 @@ import IconSvg from './Icon';
 
 export default {
   title: '01-atoms/Icon',
-    component: IconSvg,
-  decorators: [(Story) => <div style={{ margin: '3em' }}><Story/></div>],
+  component: IconSvg,
+  parameters: {
+    layout: 'centered',
+  },
   argTypes: {
     size: {
       control: {
@@ -45,6 +47,8 @@ export default {
           'Pointer',
           'SlideLeft',
           'SlideRight',
+          'ThreeDots',
+          'ThreeDotsHoriz',
           'Video',
         ],
       },
