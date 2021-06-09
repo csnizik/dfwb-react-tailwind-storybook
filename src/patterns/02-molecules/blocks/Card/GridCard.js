@@ -17,9 +17,7 @@ const GridCard = () => {
         `flex`,
         `flex-col`,
         `lg:flex-row`,
-        `mx-auto`,
-        `prose`,
-        `lg:prose-l`
+        `mx-auto`
       )}
     >
       {/* TODO: finish doing the columns */}
