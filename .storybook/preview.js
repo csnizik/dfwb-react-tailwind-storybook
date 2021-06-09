@@ -1,7 +1,7 @@
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
-    default: 'Gray 200',
+    default: 'White',
     values: [
       { name: 'Gray 200', value: '#E5E5E5' },
       {

@@ -4,6 +4,9 @@ import ChartComponent from './Chart';
 export default {
   title: '02-molecules/Chart',
   component: ChartComponent,
+  parameters: {
+    layout: 'centered',
+  },
   argTypes: {
     chartTitle: {
       table: {

@@ -5,7 +5,7 @@ import Icon from '../../../01-atoms/images/Icon';
 
 import './Card.css';
 
-const Card = ({ width = '1/3', subheading, ...props }) => {
+const Card = ({ width = '1/3', iconSize, iconType, iconColor, heading, subheading, ...props }) => {
   return (
     <div
       class={classNames(
@@ -31,7 +31,9 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
             'items-start'
           )}
         >
-          <Icon size="Medium" color="Navy Sky" type="Network" />
+          {iconType && 
+          <Icon size={iconSize} color={iconColor} type={iconType} />
+          }
           <h3
             className={classNames(
               'text-lg',
@@ -40,7 +42,7 @@ const Card = ({ width = '1/3', subheading, ...props }) => {
               'font-blue-dark'
             )}
           >
-            At a Glance
+            {heading}
           </h3>
         </div>
         <div className={classNames(`items-center`, `flex`)}>

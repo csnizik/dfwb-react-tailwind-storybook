@@ -57,7 +57,7 @@ export default create({
   colorSecondary: brandColors.navySky.value,
 
   appBg: brandColors.white.value,
-  appContentBg: brandColors.whitewashWhite.value,
+  appContentBg: brandColors.white.value,
   appBorderColor: brandColors.seaFoamTeal.value,
   appBorderRadius: 4,
 

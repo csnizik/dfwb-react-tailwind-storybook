@@ -2,7 +2,7 @@ import React from 'react';
 import {GridCard as GridCardComponent } from './index'
 
 export default {
-  title: '02-molecules/Grid Card',
+  title: '02-molecules/Card/Grid Card',
   component: GridCardComponent,
   argTypes: {
     width: {

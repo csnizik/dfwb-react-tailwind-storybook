@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../../01-atoms/images/Icon/Icon';
@@ -7,10 +7,13 @@ import Logo from '../../../01-atoms/images/Logo/Logo';
 import './Sidebar.css';
 
 function Sidebar() {
+  const [isExpanded, setIsExpanded] = useState(true);
+
   return (
     <>
       <input
         type="checkbox"
+        checked={isExpanded}
         className={classNames(
           'openSidebarMenu',
           'transition-all',
@@ -188,7 +191,7 @@ function Sidebar() {
         id="sidebarIcon"
         for="openSidebarMenu"
         className={classNames(
-          'lg:hidden',
+          'md:hidden',
           'transition-all',
           'box-border',
           'absolute',
@@ -205,7 +208,10 @@ function Sidebar() {
           'ring-0'
         )}
       >
-        <div>
+        <div
+          className={classNames('cursor-pointer')}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
           <Icon type="SlideRight" />
         </div>
       </label>

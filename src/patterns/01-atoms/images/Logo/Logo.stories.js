@@ -4,7 +4,9 @@ import LogoSvg from './Logo';
 export default {
   title: '01-atoms/Logo',
   component: LogoSvg,
-  decorators: [(Story) => <div style={{ margin: '1.5em' }}><Story/></div>],
+  parameters: {
+    layout: 'centered',
+  },
   argTypes: {
     size: {
       control: {

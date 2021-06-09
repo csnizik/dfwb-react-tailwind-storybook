@@ -81,7 +81,8 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          SUPER (48px; classes: 'text-5xl', 'font-laca', 'font-bold', '{fontColor(headingColor)})'
+          SUPER (48px; classes: 'text-5xl', 'font-laca', 'font-bold', '
+          {fontColor(headingColor)})'
         </p>
         <h1
           className={classNames(
@@ -106,7 +107,8 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          H1 (36px; classes: 'text-4xl', 'font-laca', 'font-bold', '{fontColor(headingColor)})'
+          H1 (36px; classes: 'text-4xl', 'font-laca', 'font-bold', '
+          {fontColor(headingColor)})'
         </p>
         <h1
           className={classNames(
@@ -131,7 +133,8 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          H2 (24px; classes: 'text-2xl', 'font-serif', 'font-bold', '{fontColor(headingColor)})'
+          H2 (24px; classes: 'text-2xl', 'font-serif', 'font-bold', '
+          {fontColor(headingColor)})'
         </p>
         <h2
           className={classNames(
@@ -156,7 +159,8 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          H3 (18px; classes: 'text-lg', 'font-serif', font-medium', '{fontColor(headingColor)}')
+          H3 (18px; classes: 'text-lg', 'font-serif', font-medium', '
+          {fontColor(headingColor)}')
         </p>
         <h3
           className={classNames(
@@ -182,7 +186,11 @@ const Template = ({ headingText, headingColor }) => {
             }`
           )}
         >
-          Body (16px; classes: {headingColor==='Whitewash White' ? "'text-white-dark'" : "'text-gray-500'"} )
+          Body (16px; classes:{' '}
+          {headingColor === 'Whitewash White'
+            ? "'text-white-dark'"
+            : "'text-gray-500'"}{' '}
+          )
         </p>
         <p
           className={classNames(

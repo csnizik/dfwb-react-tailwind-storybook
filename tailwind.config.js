@@ -1,4 +1,4 @@
-const  colors  = require('tailwindcss/colors');
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -38,30 +38,6 @@ module.exports = {
       },
       black: colors.black,
       gray: colors.trueGray,
-      // crystalClearTeal: {
-      //   DEFAULT: colors.teal,
-      // },
-      // sunnySkyBlue: {
-      //   DEFAULT: colors.blue,
-      // },
-      // sunsetPink: {
-      //   DEFAULT: colors.pink,
-      // },
-      // seaFoamTeal: {
-      //   DEFAULT: colors.teal.dark,
-      // },
-      // navySky: {
-      //   DEFAULT: colors.blue.dark,
-      // },
-      // mossGreen: {
-      //   DEFAULT: colors.green,
-      // },
-      // dustyRose: {
-      //   DEFAULT: colors.red,
-      // },
-      // whitewashWhite: {
-      //   DEFAULT: colors.white.dark,
-      // }
     },
     extend: {
       spacing: {
