@@ -39,6 +39,9 @@ module.exports = {
       black: colors.black,
       gray: colors.trueGray,
     },
+    container: {
+      center: true,
+    },
     extend: {
       spacing: {
         112: '28rem',
