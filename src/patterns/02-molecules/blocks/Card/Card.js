@@ -5,7 +5,15 @@ import Icon from '../../../01-atoms/images/Icon';
 
 import './Card.css';
 
-const Card = ({ width = '1/3', iconSize, iconType, iconColor, heading, subheading, ...props }) => {
+const Card = ({
+  width = '1/3',
+  iconSize,
+  iconType,
+  iconColor,
+  heading,
+  subheading,
+  ...props
+}) => {
   return (
     <div
       class={classNames(
@@ -31,19 +39,10 @@ const Card = ({ width = '1/3', iconSize, iconType, iconColor, heading, subheadin
             'items-start'
           )}
         >
-          {iconType && 
-          <Icon size={iconSize} color={iconColor} type={iconType} />
-          }
-          <h3
-            className={classNames(
-              'text-lg',
-              'font-serif',
-              'font-medium',
-              'font-blue-dark'
-            )}
-          >
-            {heading}
-          </h3>
+          {iconType && (
+            <Icon size={iconSize} color={iconColor} type={iconType} />
+          )}
+          <h2 className={classNames('hed2', 'text-blue-dark')}>{heading}</h2>
         </div>
         <div className={classNames(`items-center`, `flex`)}>
           <button

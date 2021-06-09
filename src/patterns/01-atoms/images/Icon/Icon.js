@@ -50,8 +50,10 @@ const iconColor = (color) => {
 const iconSize = (size) => {
   switch (size) {
     case 'Small':
+    case 's':
       return 'h-4 w-4';
     case 'Large':
+    case 'l':
       return 'h-16 w-16';
     default:
       return 'h-6 w-6';

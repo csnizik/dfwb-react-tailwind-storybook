@@ -1,3 +1,31 @@
 @tailwind base;
+@layer base {
+  h1.hed1 {
+    @apply text-4xl;
+    @apply font-serif;
+    @apply font-bold;
+  }
+  h1.super {
+    @apply text-5xl;
+    @apply font-serif;
+    @apply font-extrabold;
+  }
+  h2.hed2 {
+      @apply text-2xl;
+      @apply font-serif;
+      @apply font-bold;
+  }
+  h3.hed3 {
+      @apply text-lg;
+      @apply font-serif;
+      @apply font-medium;
+  }
+  p.sm {
+      @apply text-sm;
+  }
+  p.xs {
+      @apply text-xs;
+  }
+}
 @tailwind components;
 @tailwind utilities;

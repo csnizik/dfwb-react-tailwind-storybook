@@ -25,6 +25,7 @@ function Sidebar() {
       <div
         id="sidebarMenu"
         className={classNames(
+          'w-full',
           'bg-blue-dark',
           'h-full',
           'min-h-screen',
