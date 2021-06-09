@@ -73,9 +73,9 @@ const Card = ({
           'w-full',
           'py-5',
           'px-10',
+          'items-center',
           'flex',
           'justify-center',
-          'items-center',
           '-ml-3'
         )}
       >
