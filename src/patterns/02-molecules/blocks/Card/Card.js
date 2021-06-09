@@ -71,8 +71,8 @@ const Card = ({
       <div
         className={classNames(
           'w-full',
-          'px-10',
           'py-5',
+          'px-10',
           'flex',
           'items-center',
           'justify-center',
