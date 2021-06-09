@@ -48,7 +48,6 @@ export default {
           'SlideLeft',
           'SlideRight',
           'ThreeDots',
-          'ThreeDotsHoriz',
           'Video',
         ],
       },

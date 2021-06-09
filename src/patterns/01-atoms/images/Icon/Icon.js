@@ -58,7 +58,7 @@ const iconSize = (size) => {
   }
 };
 
-const renderIcon = ({ type, size, color }) => {
+const renderIcon = ({ type, size, color, ...props }) => {
   switch (type) {
     case 'ArrowDown':
       return (
