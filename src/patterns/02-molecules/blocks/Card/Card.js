@@ -74,8 +74,8 @@ const Card = ({
           'py-5',
           'px-10',
           'flex',
-          'items-center',
           'justify-center',
+          'items-center',
           '-ml-3'
         )}
       >
