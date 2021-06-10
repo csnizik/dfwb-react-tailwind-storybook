@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import propTypes from 'prop-types';
 import classNames from 'classnames';
 import Icon from '../../../01-atoms/images/Icon/Icon';
 import Logo from '../../../01-atoms/images/Logo/Logo';
