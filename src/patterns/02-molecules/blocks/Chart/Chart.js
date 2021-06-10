@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import GoogleChart from 'react-google-charts';
 
 import './Chart.css';
