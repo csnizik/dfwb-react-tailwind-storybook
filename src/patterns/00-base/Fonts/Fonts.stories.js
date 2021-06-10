@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { fontColor } from '../../utilities/textUtils';
+import { fontColor } from '../../../utilities/TextUtils';
 
 export default {
   title: '00-base/Fonts',
@@ -46,7 +46,9 @@ const Template = ({ headingText, headingColor }) => {
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -63,7 +65,9 @@ const Template = ({ headingText, headingColor }) => {
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -73,12 +77,16 @@ const Template = ({ headingText, headingColor }) => {
         >
           H1 (36px)
         </p>
-        <h1 className={classNames('hed1',fontColor(headingColor))}>{headingText}</h1>
+        <h1 className={classNames('hed1', fontColor(headingColor))}>
+          {headingText}
+        </h1>
       </div>
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -88,12 +96,16 @@ const Template = ({ headingText, headingColor }) => {
         >
           H2 (24px)
         </p>
-        <h2 className={classNames('hed2',fontColor(headingColor))}>{headingText}</h2>
+        <h2 className={classNames('hed2', fontColor(headingColor))}>
+          {headingText}
+        </h2>
       </div>
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -103,13 +115,17 @@ const Template = ({ headingText, headingColor }) => {
         >
           H3 (18px)
         </p>
-        <h3 className={classNames('hed3',fontColor(headingColor))}>{headingText}</h3>
+        <h3 className={classNames('hed3', fontColor(headingColor))}>
+          {headingText}
+        </h3>
       </div>
 
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -139,7 +155,9 @@ const Template = ({ headingText, headingColor }) => {
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold', 
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -150,7 +168,8 @@ const Template = ({ headingText, headingColor }) => {
           Body - sm (14px)
         </p>
         <p
-          className={classNames('sm',
+          className={classNames(
+            'sm',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -164,7 +183,9 @@ const Template = ({ headingText, headingColor }) => {
       <div className={classNames('row-auto')}>
         <p
           className={classNames(
-            'xs', 'tracking-widest', 'font-bold',
+            'xs',
+            'tracking-widest',
+            'font-bold',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
@@ -175,7 +196,8 @@ const Template = ({ headingText, headingColor }) => {
           Body - xs (12px)
         </p>
         <p
-          className={classNames('xs',
+          className={classNames(
+            'xs',
             `${
               headingColor === 'Whitewash White'
                 ? 'text-white-dark'
