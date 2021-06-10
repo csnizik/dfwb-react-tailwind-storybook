@@ -6,7 +6,7 @@ import Logo from '../../../01-atoms/images/Logo/Logo';
 
 import './Sidebar.css';
 
-function Sidebar() {
+function Sidebar({ pathName, ...props }) {
   const [isExpanded, setIsExpanded] = useState(true);
 
   return (
@@ -57,7 +57,7 @@ function Sidebar() {
             'pl-6',
             'rounded-bl-full',
             'rounded-tl-full',
-            'selectedListItem'
+            pathName === '/' ? 'selectedListItem' : ''
           )}
         >
           <div
@@ -83,7 +83,8 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full'
+            'rounded-tl-full',
+            pathName === '/markets' ? 'selectedListItem' : ''
           )}
         >
           <div
@@ -111,7 +112,8 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full'
+            'rounded-tl-full',
+            pathName === '/value' ? 'selectedListItem' : ''
           )}
         >
           <div
@@ -139,7 +141,8 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full'
+            'rounded-tl-full',
+            pathName === '/confidence' ? 'selectedListItem' : ''
           )}
         >
           <div
@@ -167,7 +170,8 @@ function Sidebar() {
             'py-4',
             'pl-6',
             'rounded-bl-full',
-            'rounded-tl-full'
+            'rounded-tl-full',
+            pathName === '/sentiment' ? 'selectedListItem' : ''
           )}
         >
           <div
@@ -190,7 +194,7 @@ function Sidebar() {
       </ul>
       <label
         id="sidebarIcon"
-        for="openSidebarMenu"
+        htmlFor="openSidebarMenu"
         className={classNames(
           'md:hidden',
           'transition-all',
