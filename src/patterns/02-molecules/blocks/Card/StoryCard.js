@@ -20,7 +20,7 @@ const StoryCard = (width, title, link, ...props) => {
         src="http://placehold.it/300x140" alt="sample"
       />
       <h3 className={classNames('hed3', 'px-6')}>
-        Mom Panel Product Test Image is Great
+      Mom Panel Product Test Image is Great
       </h3>
     </div>
   );

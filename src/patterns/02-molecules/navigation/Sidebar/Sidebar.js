@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import Icon from '../../../01-atoms/images/Icon/Icon';
 import Logo from '../../../01-atoms/images/Logo/Logo';
+import { NavLink } from 'react-router-dom';
 
 import './Sidebar.css';
 
@@ -12,7 +13,7 @@ function Sidebar({ pathName, ...props }) {
     <>
       <input
         type="checkbox"
-        // checked={isExpanded}
+        checked={isExpanded}
         className={classNames(
           'openSidebarMenu',
           'transition-all',
@@ -24,200 +25,222 @@ function Sidebar({ pathName, ...props }) {
       <div
         id="sidebarMenu"
         className={classNames(
-          'w-full',
+          'md:w-64',
           'bg-blue-dark',
           'min-h-full',
           'flex',
           'flex-col',
-          'items-stretch'
+          'items-end',
+          'justify-start'
         )}
       >
-        <div
-          id="brandLogo"
+        <Logo size="FullWidth" />
+
+        <ul id="page-nav">
+          <li
+            className={classNames(
+              'list-none',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/' ? 'bg-white-dark' : '',
+              pathName
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon', pathName)}>
+                <Icon type="Dashboard" size="Medium" color={ pathName  === '/' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/' ? 'text-black' : 'text-teal')}>
+                <NavLink to="/">Dashboard</NavLink>
+              </div>
+            </div>
+          </li>
+          <li
+            className={classNames(
+              'list-none',
+              'bg-transparent',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/markets' ? 'bg-white-dark' : ''
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon')}>
+                <Icon type="Network" size="Medium" color={ pathName  === '/markets' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/markets' ? 'text-black' : 'text-teal')}>
+                <NavLink to="markets">Top Markets</NavLink>
+              </div>
+            </div>
+          </li>
+          <li
+            className={classNames(
+              'list-none',
+              'bg-transparent',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/water' ? 'bg-white-dark' : ''
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon')}>
+                <Icon type="Pin" size="Medium" color={ pathName  === '/water' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/water' ? 'text-black' : 'text-teal')}>
+                <NavLink to="water">Water Adventures</NavLink>
+              </div>
+            </div>
+          </li>
+          <li
+            className={classNames(
+              'list-none',
+              'bg-transparent',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/value' ? 'bg-white-dark' : ''
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon')}>
+                <Icon type="Graph" size="Medium" color={ pathName  === '/value' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/value' ? 'text-black' : 'text-teal')}>
+                <NavLink to="value">Value Gap</NavLink>
+              </div>
+            </div>
+          </li>
+          <li
+            className={classNames(
+              'list-none',
+              'bg-transparent',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/confidence' ? 'bg-white-dark' : ''
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon')}>
+                <Icon type="Pie" size="Medium" color={ pathName  === '/confidence' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/confidence' ? 'text-black' : 'text-teal')}>
+                <NavLink to="confidence">Tourism Confidence</NavLink>
+              </div>
+            </div>
+          </li>
+          <li
+            className={classNames(
+              'list-none',
+              'bg-transparent',
+              '-mr-7',
+              'py-4',
+              'pl-6',
+              'rounded-bl-full',
+              'rounded-tl-full',
+              pathName === '/sentiment' ? 'bg-white-dark' : ''
+            )}
+          >
+            <div
+              className={classNames(
+                'flex',
+                'flex-row',
+                'items-center',
+                'w-56',
+                'listItem'
+              )}
+            >
+              <div className={classNames('listItemIcon')}>
+                <Icon type="Video" size="Medium" color={ pathName  === '/sentiment' ? 'black' : 'Crystal-Clear Teal'} />
+              </div>
+              <div className={classNames('pl-3', 'listItemText', pathName === '/sentiment' ? 'text-black' : 'text-teal')}>
+                <NavLink to="sentiment">Family Sentiment</NavLink>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <label
+          id="sidebarIcon"
+          htmlFor="openSidebarMenu"
           className={classNames(
-            'w-full',
-            'h-48',
+            'md:hidden',
+            'transition-all',
+            'box-border',
+            'absolute',
+            'z-50',
+            'h-12',
+            'w-12',
+            'bottom-6',
+            'left-4',
+            'bg-teal',
+            'rounded-full',
             'flex',
-            'flex-row',
-            'justify-end'
+            'justify-center',
+            'items-center',
+            'ring-0'
           )}
         >
-          <Logo size="Large" />
-        </div>
+          <div
+            className={classNames('cursor-pointer')}
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <Icon type="SlideRight" />
+          </div>
+        </label>
       </div>
-      <ul className={classNames('p-0', 'w-auto', 'fixed', 'top-48')}>
-        <li
-          className={classNames(
-            'list-none',
-            'bg-gray-200',
-            '-mr-7',
-            'py-4',
-            'pl-6',
-            'rounded-bl-full',
-            'rounded-tl-full',
-            pathName === '/' ? 'selectedListItem' : ''
-          )}
-        >
-          <div
-            className={classNames(
-              'flex',
-              'flex-row',
-              'items-center',
-              'w-56',
-              'listItem'
-            )}
-          >
-            <div className={classNames('listItemIcon')}>
-              <Icon type="Dashboard" size="Medium" />
-            </div>
-            <div className={classNames('pl-3', 'listItemText')}>Dashboard</div>
-          </div>
-        </li>
-        <li
-          className={classNames(
-            'list-none',
-            'bg-transparent',
-            '-mr-7',
-            'py-4',
-            'pl-6',
-            'rounded-bl-full',
-            'rounded-tl-full',
-            pathName === '/markets' ? 'selectedListItem' : ''
-          )}
-        >
-          <div
-            className={classNames(
-              'flex',
-              'flex-row',
-              'items-center',
-              'w-56',
-              'listItem'
-            )}
-          >
-            <div className={classNames('listItemIcon')}>
-              <Icon type="Network" size="Medium" color="Crystal-Clear Teal" />
-            </div>
-            <div className={classNames('pl-3', 'text-teal', 'listItemText')}>
-              Top Markets
-            </div>
-          </div>
-        </li>
-        <li
-          className={classNames(
-            'list-none',
-            'bg-transparent',
-            '-mr-7',
-            'py-4',
-            'pl-6',
-            'rounded-bl-full',
-            'rounded-tl-full',
-            pathName === '/value' ? 'selectedListItem' : ''
-          )}
-        >
-          <div
-            className={classNames(
-              'flex',
-              'flex-row',
-              'items-center',
-              'w-56',
-              'listItem'
-            )}
-          >
-            <div className={classNames('listItemIcon')}>
-              <Icon type="Graph" size="Medium" color="Crystal-Clear Teal" />
-            </div>
-            <div className={classNames('pl-3', 'text-teal', 'listItemText')}>
-              Value Gap
-            </div>
-          </div>
-        </li>
-        <li
-          className={classNames(
-            'list-none',
-            'bg-transparent',
-            '-mr-7',
-            'py-4',
-            'pl-6',
-            'rounded-bl-full',
-            'rounded-tl-full',
-            pathName === '/confidence' ? 'selectedListItem' : ''
-          )}
-        >
-          <div
-            className={classNames(
-              'flex',
-              'flex-row',
-              'items-center',
-              'w-56',
-              'listItem'
-            )}
-          >
-            <div className={classNames('listItemIcon')}>
-              <Icon type="Pie" size="Medium" color="Crystal-Clear Teal" />
-            </div>
-            <div className={classNames('pl-3', 'text-teal', 'listItemText')}>
-              Tourism Confidence
-            </div>
-          </div>
-        </li>
-        <li
-          className={classNames(
-            'list-none',
-            'bg-transparent',
-            '-mr-7',
-            'py-4',
-            'pl-6',
-            'rounded-bl-full',
-            'rounded-tl-full',
-            pathName === '/sentiment' ? 'selectedListItem' : ''
-          )}
-        >
-          <div
-            className={classNames(
-              'flex',
-              'flex-row',
-              'items-center',
-              'w-56',
-              'listItem'
-            )}
-          >
-            <div className={classNames('listItemIcon')}>
-              <Icon type="Video" size="Medium" color="Crystal-Clear Teal" />
-            </div>
-            <div className={classNames('pl-3', 'text-teal', 'listItemText')}>
-              Family Sentiment
-            </div>
-          </div>
-        </li>
-      </ul>
-      <label
-        id="sidebarIcon"
-        htmlFor="openSidebarMenu"
-        className={classNames(
-          'md:hidden',
-          'transition-all',
-          'box-border',
-          'absolute',
-          'z-50',
-          'h-12',
-          'w-12',
-          'bottom-6',
-          'left-4',
-          'bg-teal',
-          'rounded-full',
-          'flex',
-          'justify-center',
-          'items-center',
-          'ring-0'
-        )}
-      >
-        <div
-          className={classNames('cursor-pointer')}
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          <Icon type="SlideRight" />
-        </div>
-      </label>
     </>
   );
 }

@@ -33,7 +33,7 @@ const StoryCardContainer = ({
       >
         <div
           className={classNames(
-            `pt-4`,
+            
             `pl-4`,
             'flex',
             'flex-row',
@@ -52,9 +52,9 @@ const StoryCardContainer = ({
         <div className={classNames('text-gray-500')}>{subheading}</div>
       </div>
       <div className={classNames('space-y-4')}>
-        <StoryCard />
+        <StoryCard title="Atlanta Mom Feedback"/>
 
-        <StoryCard />
+        <StoryCard title="Mom Panel Product Test Image is Great"/>
       </div>
     </div>
   );

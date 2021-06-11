@@ -11,6 +11,7 @@ const Home = () => {
       className={classNames(
         'flex',
         'flex-row',
+        'space-between-3',
         'min-h-screen',
         'overflow-hidden'
       )}
@@ -18,7 +19,7 @@ const Home = () => {
       <Sidebar pathName={pathName} />
 
       <main className={classNames('flex-grow')}>
-        <Dashboard />
+        <Dashboard pathName={pathName}/>
       </main>
     </div>
   );

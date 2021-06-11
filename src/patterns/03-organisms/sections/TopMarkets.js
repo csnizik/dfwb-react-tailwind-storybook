@@ -5,7 +5,7 @@ import Chart from '../../02-molecules/blocks/Chart/Chart';
 
 const TopMarkets = ({ pathName, classes, ...props }) => {
   return (
-    <section classNames={classNames(classes)}>
+    <section className={classNames(classes)}>
       <Card
         width="full"
         iconType="Network"

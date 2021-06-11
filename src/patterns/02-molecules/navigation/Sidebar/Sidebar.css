@@ -1,9 +1,6 @@
 @import '../../../../index.css';
 
-#sidebarMenu {
-  left: 0;
-  width: 224px;
-}
+
 
 @media only screen and (max-width: 1024px) {
   #sidebarMenu {
@@ -39,7 +36,7 @@
 }
 
 .selectedListItem {
-  background-color: red;
+  background-color: white-dark;
   width: 224px;
 }
 

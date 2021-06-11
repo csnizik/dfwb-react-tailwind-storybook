@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import SignIn from './patterns/05-pages/SignIn';
 import ResetPassword from './patterns/05-pages/ResetPassword';
 import Admin from './patterns/05-pages/Admin';
-import PageNotFound from './patterns/05-pages/PageNotFound';
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <Route path="/signin" component={SignIn} />
         <Route path="reset-password" component={ResetPassword} />
         <Route path="/admin" component={Admin} />
-        <Route path="*" component={PageNotFound} />
+        <Route path="*" component={Home} />
       </Switch>
     </>
   );

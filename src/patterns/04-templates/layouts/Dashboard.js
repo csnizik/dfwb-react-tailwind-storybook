@@ -10,31 +10,46 @@ import Button from '../../01-atoms/buttons/Button';
 import Icon from '../../01-atoms/images/Icon/Icon';
 
 const Dashboard = ({ pathName, ...props }) => {
+  const fullDisplay = () => {};
+
+  const pageHeading = (path) => {
+    switch (path) {
+      case '/markets':
+        return 'Top Markets';
+      case '/water':
+        return 'Water Adventures';
+      case '/value':
+        return 'Value Gap';
+      case '/confidence':
+        return 'Tourism Confidence';
+      case '/sentiment':
+        return 'Family Sentiment';
+      default:
+        return 'Dashboard';
+    }
+  };
   return (
     <section
       className={classNames(
         'relative',
         'min-w-full',
-        'min-h-screen',
+        'min-h-full',
         'bg-white-dark',
-        'px-10',
+        'p-8',
         'flex',
         'flex-col',
-        'justify-between'
+        'justify-between',
+        'space-y-1'
       )}
     >
       <div
         id="r1"
-        className={classNames(
-          'w-full',
-          'h-auto',
-          'my-2',
-          'flex',
-          'justify-between'
-        )}
+        className={classNames(pathName === '/' ? 'w-full' : 'hidden', 'h-auto', 'flex', 'justify-between')}
       >
         <div className={classNames('flex', 'justify-between', 'items-end')}>
-          <h1 className={classNames('hed1', 'text-black')}>Dashboard</h1>
+          <h1 className={classNames('hed1', 'text-black')}>
+            {pageHeading(pathName)}
+          </h1>
           <p
             className={classNames(
               'xs',
@@ -53,7 +68,14 @@ const Dashboard = ({ pathName, ...props }) => {
         </div>
         <Button>Login</Button>
       </div>
-      <div id="r2" className={classNames('w-full', 'my-2')}>
+      <div
+        id="r2"
+        className={classNames(
+          'min-h-0',
+          'min-w-0',
+          pathName === '/' ? 'w-full' : 'hidden'
+        )}
+      >
         <AtAGlance classes="w-full" />
       </div>
       <div
@@ -62,20 +84,27 @@ const Dashboard = ({ pathName, ...props }) => {
           'w-full',
           'flex',
           'flex-row',
-          'items-start'
+          'items-start',
+          'space-x-6',
+          'justify-between'
         )}
       >
         <div
           id="r3c1"
           className={classNames(
-            'w-2/3',
+            pathName === '/' || pathName === '/markets' || pathName === '/value' || pathName === '/confidence' ? 'w-2/3' : 'hidden',
             'flex',
             'flex-col',
             'justify-between',
-            'mr-2'
+            'space-y-6'
           )}
         >
-          <div id="r3c1r1" className={classNames('w-full')}>
+          <div
+            id="r3c1r1"
+            className={classNames(
+              pathName === '/' || pathName === '/markets' ? 'w-full' : 'hidden'
+            )}
+          >
             <TopMarkets />
           </div>
           <div
@@ -85,28 +114,46 @@ const Dashboard = ({ pathName, ...props }) => {
               'flex',
               'flex-row',
               'justify-between',
-              'mt-2',
-              'items-start'
+              'items-start',
+              'space-x-6'
             )}
           >
-            <ValueGap classes="w-1/2 mr-4 mt-4" />
-            <TourismConfidence classes="w-1/2 ml-4 mt-4" />
+            <ValueGap
+              classes={
+                pathName === '/' || pathName === '/value' ? 'w-1/2' : 'hidden'
+              }
+            />
+            <TourismConfidence
+              classes={
+                pathName === '/' || pathName === '/confidence'
+                  ? 'w-1/2'
+                  : 'hidden'
+              }
+            />
           </div>
         </div>
         <div
           id="r3c2"
           className={classNames(
             'flex-grow',
-            'ml-4',
-            'mb-4',
-            'mr-2',
             'flex',
             'flex-col',
-            'justify-between'
+            'space-y-6',
+            'justify-start'
           )}
         >
-          <WaterAdventures classes="w-full " />
-          <FamilySentiment classes="w-full" />
+          <WaterAdventures
+            classes={
+              pathName === '/' || pathName === '/water' ? 'w-full' : 'hidden'
+            }
+          />
+          <FamilySentiment
+            classes={
+              pathName === '/' || pathName === '/sentiment'
+                ? 'w-full'
+                : 'hidden'
+            }
+          />
         </div>
       </div>
     </section>
