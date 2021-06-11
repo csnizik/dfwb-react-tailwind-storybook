@@ -5,7 +5,7 @@ import Icon from '../../../01-atoms/images/Icon';
 import './Card.css';
 
 const Card = ({
-  width = '1/3',
+  width,
   iconSize,
   iconType,
   iconColor,
@@ -21,21 +21,20 @@ const Card = ({
         `rounded-lg`,
         `shadow`,
         `bg-white`,
-        `md:space-x-3`,
-        `flex-col`,
-        `m-8`
+        'flex',
+        `flex-col`
       )}
     >
-      <div className={classNames(`flex`, `w-full`, `justify-between`)}>
+      <div className={classNames(`flex`, `w-full`, `justify-between`,'items-center')}>
         <div
           className={classNames(
             `pt-4`,
             `pl-4`,
             'flex',
-            'flex-rox',
+            'flex-row',
             'space-x-3',
             'justify-center',
-            'items-start'
+            'items-center'
           )}
         >
           {iconType && (
