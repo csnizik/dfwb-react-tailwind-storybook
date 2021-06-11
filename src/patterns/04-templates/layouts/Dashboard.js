@@ -32,8 +32,8 @@ const Dashboard = ({ pathName, ...props }) => {
     <section
       className={classNames(
         'relative',
-        'min-w-full',
         'min-h-full',
+        'min-w-full',
         'bg-white-dark',
         'p-8',
         'flex',
@@ -44,7 +44,12 @@ const Dashboard = ({ pathName, ...props }) => {
     >
       <div
         id="r1"
-        className={classNames(pathName === '/' ? 'w-full' : 'hidden', 'h-auto', 'flex', 'justify-between')}
+        className={classNames(
+          pathName === '/' ? 'w-full' : 'hidden',
+          'h-auto',
+          'flex',
+          'justify-between'
+        )}
       >
         <div className={classNames('flex', 'justify-between', 'items-end')}>
           <h1 className={classNames('hed1', 'text-black')}>
@@ -92,7 +97,12 @@ const Dashboard = ({ pathName, ...props }) => {
         <div
           id="r3c1"
           className={classNames(
-            pathName === '/' || pathName === '/markets' || pathName === '/value' || pathName === '/confidence' ? 'w-2/3' : 'hidden',
+            pathName === '/' ||
+              pathName === '/markets' ||
+              pathName === '/value' ||
+              pathName === '/confidence'
+              ? 'w-2/3'
+              : 'hidden',
             'flex',
             'flex-col',
             'justify-between',
