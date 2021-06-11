@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import StoryCardContainer from './StoryCardContainer';
 
 const StoryCard = (width, title, link, ...props) => {
   return (
@@ -12,15 +11,17 @@ const StoryCard = (width, title, link, ...props) => {
         'bg-white',
         'flex',
         'flex-row',
-          'space-between',
-          'items-center'
+        'space-between',
+        'items-center'
       )}
     >
       <img
         className={classNames('rounded-l-lg')}
-        src="http://placehold.it/300x140"
-          />
-          <h3 className={classNames('hed3','px-6')}>Mom Panel Product Test Image is Great</h3>
+        src="http://placehold.it/300x140" alt="sample"
+      />
+      <h3 className={classNames('hed3', 'px-6')}>
+        Mom Panel Product Test Image is Great
+      </h3>
     </div>
   );
 };

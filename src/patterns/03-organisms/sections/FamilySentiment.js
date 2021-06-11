@@ -4,7 +4,7 @@ import StoryCardContainer from '../../02-molecules/blocks/Card/StoryCardContaine
 
 const FamilySentiment = ({ pathName, classes, ...props }) => {
   return (
-    <section className={classes}>
+    <section className={classNames(classes)}>
       <StoryCardContainer heading="Family Sentiment" />
     </section>
   );
