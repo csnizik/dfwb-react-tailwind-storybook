@@ -19,7 +19,6 @@ const Chart = ({
       <GoogleChart
         width={width}
         height={height}
-        isExpanded={isExpanded}
         chartType={chartType}
         loader="Chart is loading..."
         data={data}
