@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import React from 'react';
+import StoryCardContainer from '../../02-molecules/blocks/Card/StoryCardContainer';
 
-const FamilySentiment = () => {
+const FamilySentiment = ({ pathName, classes, ...props }) => {
   return (
-    <main className={classNames('flex-grow')}>
-      <h1>Family Sentiment</h1>
-    </main>
+    <section className={classes}>
+      <StoryCardContainer heading="Family Sentiment" />
+    </section>
   );
 };
 
