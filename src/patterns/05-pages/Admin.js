@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import PageAdministration from '../04-templates/layouts/PageAdministration';
+import PageAdministration from '../04-templates/layouts/SiteAdministration';
 
 const Admin = () => {
   return (
