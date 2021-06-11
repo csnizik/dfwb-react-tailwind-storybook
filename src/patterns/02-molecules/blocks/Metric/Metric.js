@@ -6,7 +6,7 @@ import './Metric.css';
 
 const Metric = ({ value, trend, ...props }) => {
   return (
-    <div className={classNames('flex-column')}>
+    <div className={classNames('flex','flex-col')}>
       <div
         className={classNames(
           `flex`,
