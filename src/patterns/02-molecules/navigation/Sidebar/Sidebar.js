@@ -12,7 +12,7 @@ function Sidebar({ pathName, ...props }) {
     <>
       <input
         type="checkbox"
-        checked={isExpanded}
+        // checked={isExpanded}
         className={classNames(
           'openSidebarMenu',
           'transition-all',
@@ -26,8 +26,7 @@ function Sidebar({ pathName, ...props }) {
         className={classNames(
           'w-full',
           'bg-blue-dark',
-          'h-full',
-          'min-h-screen',
+          'min-h-full',
           'flex',
           'flex-col',
           'items-stretch'
