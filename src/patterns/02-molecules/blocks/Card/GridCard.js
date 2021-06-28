@@ -8,33 +8,26 @@ const GridCard = ({ ctaText, ...props }) => {
     <>
       <div
         class={classNames(
-          `w-full`,
           ctaText ? `rounded-t-lg` : `rounded-lg`,
           `shadow`,
+          'p-4',
           `bg-white`,
-          `md:space-x-3`,
           `flex`,
           `flex-col`,
-          `mx-auto`,
-          'mt-5',
           ctaText ? 'mb-0' : 'mb-5'
         )}
       >
-        <div className={classNames('p-4')}>{props.children}</div>
+        <div>{props.children}</div>
       </div>
 
       {ctaText && (
         <div
           className={classNames(
-            'w-full',
             'rounded-b-lg',
             'shadow',
             'bg-teal-dark',
-            'md:space-x-3',
             'flex',
-            'mx-auto',
             'p-4',
-            'mb-5',
             'justify-center'
           )}
         >

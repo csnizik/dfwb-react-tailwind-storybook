@@ -25,6 +25,7 @@ function Sidebar({ pathName, ...props }) {
       <div
         id="sidebarMenu"
         className={classNames(
+          'w-30',
           'md:w-64',
           'bg-blue-dark',
           'min-h-full',
@@ -34,7 +35,7 @@ function Sidebar({ pathName, ...props }) {
           'justify-start'
         )}
       >
-        <Logo size="FullWidth" />
+        <Logo />
 
         <ul id="page-nav">
           <li

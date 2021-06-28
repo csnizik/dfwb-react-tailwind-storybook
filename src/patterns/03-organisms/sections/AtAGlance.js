@@ -11,9 +11,9 @@ const AtAGlance = ({ pathName, classes, ...props }) => {
         <div
           className={classNames(
             'flex',
-            'flex-row',
+            'flex-col',
+            'sm:flex-row',
             'justify-around',
-            'w-full',
             'divide-x',
             'divide-gray-300',
             'divide-solid'

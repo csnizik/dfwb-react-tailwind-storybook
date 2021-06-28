@@ -13,7 +13,8 @@ const Home = () => {
         'flex-row',
         'space-between-3',
         'min-h-screen',
-        'overflow-hidden'
+        'overflow-hidden',
+        
       )}
     >
       <Sidebar pathName={pathName} />

@@ -7,7 +7,6 @@ const WaterAdventures = ({ pathName, classes, ...props }) => {
   return (
     <section className={classNames(classes)}>
       <Card
-        width="full"
         iconType="Pin"
         iconColor="NavySky"
         iconSize="small"
