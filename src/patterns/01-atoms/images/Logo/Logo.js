@@ -8,10 +8,10 @@ import { ReactComponent as DSFWLogo } from './DestinFWBLogo.svg';
 
 const logoClasses = (size) =>
   classNames({
-    'w-96 h-96 max-w-full max-h-full': !size || size === 'Large',
-    'w-full h-auto': size === 'FullWidth',
-    'w-48 h-48': size === 'Medium',
-    'w-24 h-24': size === 'Small',
+    'w-96 h-96 max-w-full max-h-full': !size || size === 'lg',
+    'w-full h-auto': size === 'full',
+    'w-48 h-48': size === 'md',
+    'w-24 h-24': size === 'sm',
   });
 
 const logoColor = (color) =>

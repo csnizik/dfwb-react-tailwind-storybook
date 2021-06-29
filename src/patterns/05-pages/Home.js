@@ -1,27 +1,32 @@
 import classNames from 'classnames';
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import Sidebar from '../02-molecules/navigation/Sidebar';
-import Dashboard from '../04-templates/layouts/Dashboard';
+import Header from '../02-molecules/components/Header';
 
-const Home = () => {
-  const pathName = useLocation().pathname; // Home path /
+const Home = ({ pathName }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div
-      className={classNames(
-        'flex',
-        'flex-row',
-        'space-between-3',
-        'min-h-screen',
-        'overflow-hidden',
-        
-      )}
-    >
-      <Sidebar pathName={pathName} />
-
-      <main className={classNames('flex-grow')}>
-        <Dashboard pathName={pathName}/>
-      </main>
+    <div className={classNames('flex', 'h-screen', 'overflow-hidden')}>
+      <Sidebar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        pathName={pathName}
+      />
+      <div
+        className={classNames(
+          'relative',
+          'ml-20',
+          'sm:ml-0',
+          'flex-grow',
+          'flex',
+          'flex-col',
+          'overflow-y-auto',
+          'overflow-x-hidden',
+          'bg-white-dark'
+        )}>
+        <Header pathName={pathName} />
+      </div>
     </div>
   );
 };

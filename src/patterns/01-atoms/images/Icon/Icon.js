@@ -22,24 +22,34 @@ import { ReactComponent as Video } from './video.svg';
 const iconColor = (color) => {
   switch (color) {
     case 'Crystal-Clear Teal':
+    case 'teal':
       return 'text-teal';
     case 'Sunny-Sky Blue':
+    case 'blue-light':
       return 'text-blue';
     case 'Sunset Pink':
+    case 'pink':
       return 'text-pink';
     case 'Sea Foam Teal':
+    case 'teal-dark':
       return 'text-teal-dark';
     case 'Navy Sky':
+    case 'blue-dark':
       return 'text-blue-dark';
     case 'Moss Green':
+    case 'green':
       return 'text-green';
     case 'Dusty Rose':
+    case 'red':
       return 'text-red';
     case 'Whitewash White':
+    case 'white-dark':
       return 'text-white-dark';
     case 'Black':
+    case 'black':
       return 'text-black';
     case 'Gray':
+    case 'gray':
       return 'text-gray-500';
     default:
       return '';
@@ -59,7 +69,7 @@ const iconSize = (size) => {
   }
 };
 
-const renderIcon = ({ type, size, color, ...props }) => {
+const renderIcon = ({ type, size, color, classes, ...props }) => {
   switch (type) {
     case 'ArrowDown':
       return (
@@ -67,7 +77,8 @@ const renderIcon = ({ type, size, color, ...props }) => {
           className={classNames(
             'fill-current',
             iconSize(size),
-            color && iconColor(color)
+            color && iconColor(color),
+            classes
           )}
         />
       );
