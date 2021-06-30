@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import EditMenu from '../../02-molecules/navigation/EditMenu/EditMenu';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
 
 const WaterAdventures = ({ pathName }) => {
-  const [cardExpanded, setCardExpanded] = useState(false);
+  // const [cardExpanded, setCardExpanded] = useState(false);
   return (
     <div
       className={classNames(

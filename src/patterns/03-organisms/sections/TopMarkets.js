@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
 import { Link, NavLink } from 'react-router-dom';
 import EditMenu from '../../02-molecules/navigation/EditMenu/EditMenu';
 
 const TopMarkets = ({ pathName }) => {
-  const [cardExpanded, setCardExpanded] = useState(false);
+  // const [cardExpanded, setCardExpanded] = useState(false);
   return (
     <div
       className={classNames(
