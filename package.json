@@ -59,6 +59,7 @@
     "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
     "@storybook/react": "^6.1.20",
-    "@storybook/theming": "^6.2.9"
+    "@storybook/theming": "^6.2.9",
+    "prettier": "2.2.1"
   }
 }

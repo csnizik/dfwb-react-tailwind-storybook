@@ -17,29 +17,40 @@ import { ReactComponent as Pointer } from './pointer.svg';
 import { ReactComponent as SlideLeft } from './slide-left.svg';
 import { ReactComponent as SlideRight } from './slide-right.svg';
 import { ReactComponent as ThreeDots } from './three-dots-vert.svg';
+import { ReactComponent as Triangle } from './triangle.svg';
 import { ReactComponent as Video } from './video.svg';
 
 const iconColor = (color) => {
   switch (color) {
     case 'Crystal-Clear Teal':
+    case 'teal':
       return 'text-teal';
     case 'Sunny-Sky Blue':
+    case 'blue-light':
       return 'text-blue';
     case 'Sunset Pink':
+    case 'pink':
       return 'text-pink';
     case 'Sea Foam Teal':
+    case 'teal-dark':
       return 'text-teal-dark';
     case 'Navy Sky':
+    case 'blue-dark':
       return 'text-blue-dark';
     case 'Moss Green':
+    case 'green':
       return 'text-green';
     case 'Dusty Rose':
+    case 'red':
       return 'text-red';
     case 'Whitewash White':
+    case 'white-dark':
       return 'text-white-dark';
     case 'Black':
+    case 'black':
       return 'text-black';
     case 'Gray':
+    case 'gray':
       return 'text-gray-500';
     default:
       return '';
@@ -48,6 +59,9 @@ const iconColor = (color) => {
 
 const iconSize = (size) => {
   switch (size) {
+    case 'XSmall':
+    case 'xs':
+      return 'h-3 w-3';
     case 'Small':
     case 's':
       return 'h-4 w-4';
@@ -59,7 +73,7 @@ const iconSize = (size) => {
   }
 };
 
-const renderIcon = ({ type, size, color, ...props }) => {
+const renderIcon = ({ type, size, color, classes, ...props }) => {
   switch (type) {
     case 'ArrowDown':
       return (
@@ -67,7 +81,8 @@ const renderIcon = ({ type, size, color, ...props }) => {
           className={classNames(
             'fill-current',
             iconSize(size),
-            color && iconColor(color)
+            color && iconColor(color),
+            classes
           )}
         />
       );
@@ -210,6 +225,16 @@ const renderIcon = ({ type, size, color, ...props }) => {
             iconColor(color),
             'transform',
             'rotate-90'
+          )}
+        />
+      );
+    case 'Triangle':
+      return (
+        <Triangle
+          className={classNames(
+            'fill-current',
+            iconSize(size),
+            iconColor(color)
           )}
         />
       );

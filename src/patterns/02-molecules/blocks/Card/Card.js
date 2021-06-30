@@ -16,8 +16,7 @@ const Card = ({
   return (
     <div
       class={classNames(
-        `w-full`,
-        `md:w-${width}`,
+        `flex-grow`,
         `rounded-lg`,
         `shadow`,
         `bg-white`,
