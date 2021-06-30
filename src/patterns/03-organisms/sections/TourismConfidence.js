@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
 import { Link, NavLink } from 'react-router-dom';
 import EditMenu from '../../02-molecules/navigation/EditMenu/EditMenu';
 
 const TourismConfidence = ({ pathName }) => {
-  const [cardExpanded, setCardExpanded] = useState(false);
+  // const [cardExpanded, setCardExpanded] = useState(false);
   return (
     <div
       className={classNames(
@@ -125,8 +126,6 @@ const TourismConfidence = ({ pathName }) => {
             pieSliceTextStyle: {
               color: 'black',
             },
-            legend: 'none',
-            colors: ['#AFE1E2', '#48AAED'],
             legend: { position: 'none' },
             colors: ['#48AAED', '#77DBDB', '#FCB3B1'],
           }}

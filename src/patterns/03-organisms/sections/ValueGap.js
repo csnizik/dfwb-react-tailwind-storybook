@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
 import { Link, NavLink } from 'react-router-dom';
 import EditMenu from '../../02-molecules/navigation/EditMenu/EditMenu';
 
 const ValueGap = ({ pathName }) => {
-  const [cardExpanded, setCardExpanded] = useState(false);
+  // const [cardExpanded, setCardExpanded] = useState(false);
   return (
     <div
       className={classNames(
@@ -68,28 +69,28 @@ const ValueGap = ({ pathName }) => {
         )}
         {pathName === '/value' && (
           <EditMenu className="relative inline-flex">
-          <li>
-            <Link
-              className="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3"
-              to="#0">
-              Download PDF
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3"
-              to="#0">
-              Option 2
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="font-medium text-sm text-red-500 hover:text-red-600 flex py-1 px-3"
-              to="/">
-              Return to Dashboard
-            </Link>
-          </li>
-        </EditMenu>
+            <li>
+              <Link
+                className="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3"
+                to="#0">
+                Download PDF
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-medium text-sm text-gray-600 hover:text-gray-800 flex py-1 px-3"
+                to="#0">
+                Option 2
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="font-medium text-sm text-red-500 hover:text-red-600 flex py-1 px-3"
+                to="/">
+                Return to Dashboard
+              </Link>
+            </li>
+          </EditMenu>
         )}
       </div>
       <p
