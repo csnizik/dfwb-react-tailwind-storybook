@@ -2,15 +2,35 @@ import classNames from 'classnames';
 import React from 'react';
 
 function Header({ pathName }) {
+  const pageName = (pathName) => {
+    switch (pathName) {
+      case '/':
+        return 'Dashboard';
+      case '/markets':
+        return 'Top Markets';
+      case '/water':
+        return 'Water Adventures';
+      case '/value':
+        return 'Value Gap';
+      case '/confidence':
+        return 'Tourism Confidence';
+      case '/sentiment':
+        return 'Family Sentiment';
+      default:
+        return '';
+    }
+  };
   return (
     <header
       className={classNames(
-        'sticky',
+        'static',
         'top-0',
-        'px-4',
+        'p-4',
+        '',
         'sm:px-6',
-        'lg:px-8',
-        pathName == '/' ? 'flex-grow' : 'hidden'
+        'bg-white',
+        'sm:bg-white-dark',
+        'z-50',
       )}>
       <div
         className={classNames(
@@ -18,8 +38,6 @@ function Header({ pathName }) {
           'items-center',
           'justify-end',
           'sm:justify-between',
-          'bg-white',
-          'sm:bg-white-dark',
           'h-12',
           'mb-1',
           'sm:-mb-px',
@@ -30,10 +48,10 @@ function Header({ pathName }) {
           'pr-4',
           'sm:pr-0',
           'shadow-sm',
-          'sm:shadow-none'
+          'sm:shadow-none',
         )}>
         <h1 className={classNames('hed1', 'text-black', 'hidden', 'sm:block')}>
-          Dashboard
+          {pageName(pathName)}
         </h1>
         <div
           className={classNames(
@@ -73,7 +91,9 @@ function Header({ pathName }) {
         </div>
       </div>
       <div id="mobileTitle" className={classNames('block', 'sm:hidden')}>
-        <h1 className={classNames('hed1', 'text-black')}>Dashboard</h1>
+        <h1 className={classNames('hed1', 'text-black')}>
+          {pageName(pathName)}
+        </h1>
       </div>
     </header>
   );

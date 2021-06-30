@@ -17,6 +17,7 @@ import { ReactComponent as Pointer } from './pointer.svg';
 import { ReactComponent as SlideLeft } from './slide-left.svg';
 import { ReactComponent as SlideRight } from './slide-right.svg';
 import { ReactComponent as ThreeDots } from './three-dots-vert.svg';
+import { ReactComponent as Triangle } from './triangle.svg';
 import { ReactComponent as Video } from './video.svg';
 
 const iconColor = (color) => {
@@ -58,6 +59,9 @@ const iconColor = (color) => {
 
 const iconSize = (size) => {
   switch (size) {
+    case 'XSmall':
+    case 'xs':
+      return 'h-3 w-3';
     case 'Small':
     case 's':
       return 'h-4 w-4';
@@ -221,6 +225,16 @@ const renderIcon = ({ type, size, color, classes, ...props }) => {
             iconColor(color),
             'transform',
             'rotate-90'
+          )}
+        />
+      );
+    case 'Triangle':
+      return (
+        <Triangle
+          className={classNames(
+            'fill-current',
+            iconSize(size),
+            iconColor(color)
           )}
         />
       );

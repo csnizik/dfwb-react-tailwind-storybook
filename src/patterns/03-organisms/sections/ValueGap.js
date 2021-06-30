@@ -1,51 +1,138 @@
-import React from 'react';
 import classNames from 'classnames';
-import Card from '../../02-molecules/blocks/Card/Card';
-import Chart from 'react-google-charts';
+import React, { useState } from 'react';
+import Chart from '../../02-molecules/blocks/Chart/Chart';
+import Icon from '../../01-atoms/images/Icon/Icon';
 
-const ValueGap = ({ pathName, classes, ...props }) => {
+const ValueGap = ({ pathName }) => {
+  const [cardExpanded, setCardExpanded] = useState(false);
   return (
-    <section className={classNames(classes)}>
-      <Card
-        width="full"
-        iconType="Graph"
-        iconColor="NavySky"
-        iconSize="small"
-        heading="Value Gap"
-        subheading="Measures decreased dark green gap"
-      >
+    <div
+      className={classNames(
+        'flex',
+        'flex-col',
+        'col-span-3',
+        pathName !== '/value' ? 'lg:col-span-1' : '',
+        'p-3',
+        'rounded-lg',
+        'shadow',
+        'bg-white'
+      )}>
+      <div
+        className={classNames(
+          'flex',
+          '-mt-3',
+          '-mx-3',
+          'rounded-t-lg',
+          'min-w-full',
+          'justify-between'
+        )}>
+        <div
+          className={classNames(
+            'pt-4',
+            'pl-4',
+            'flex',
+            'self-start',
+            'space-x-3',
+            'justify-center',
+            'items-center',
+            pathName === '/' ? 'visible' : 'invisible'
+          )}>
+          <Icon size="small" color="Navy Sky" type="Graph" />
+          <h3 className={classNames('hed-3', 'text-blue-dark')}>Value Gap</h3>
+        </div>
+        <div className={classNames('self-end', 'flex', 'items-center')}>
+          <button
+            className={classNames(
+              `bg-teal-dark`,
+              `text-white`,
+              `rounded-tr-lg`,
+              `rounded-bl-lg`,
+              `focus:outline-none`,
+              `hover:bg-teal-light`,
+              `w-12`,
+              `h-12`,
+              `font-sans`,
+              'flex',
+              'justify-center',
+              'items-center'
+            )}>
+            <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
+          </button>
+        </div>
+      </div>
+      <p
+        className={classNames(
+          'text-gray-500',
+          'text-sm',
+          pathName === '/' ? 'visible' : 'invisible'
+        )}>
+        Measures decreased dark green gap
+      </p>
+      <div id="valueChart" className={classNames('self-center')}>
         <Chart
-          width={'300px'}
-          height={'300px'}
           chartType="ComboChart"
-          loader={<div>Loading Chart</div>}
           data={[
             [
               'Month',
-              'Bolivia',
-              'Ecuador',
-              'Madagascar',
-              'Papua New Guinea',
-              'Rwanda',
-              'Average',
+              'FY 2019 Revenue',
+              'FY 2019 Occupancy',
+              'FY 2020 Occupancy',
             ],
-            ['2004/05', 165, 938, 522, 998, 450, 614.6],
-            ['2005/06', 135, 1120, 599, 1268, 288, 682],
-            ['2006/07', 157, 1167, 587, 807, 397, 623],
-            ['2007/08', 139, 1110, 615, 968, 215, 609.4],
-            ['2008/09', 136, 691, 629, 1026, 366, 569.6],
+            [new Date(2020, 0), 10, 60, 70],
+            [new Date(2020, 1), 8, 50, 60],
+            [new Date(2020, 2), 7, 45, 50],
+            [new Date(2020, 3), 7.5, 55, 60],
+            [new Date(2020, 4), 8, 75, 80],
+            [new Date(2020, 5), 11, 60, 84],
+            [new Date(2020, 6), 11, 30, 80],
+            [new Date(2020, 7), 20, 55, 85],
+            [new Date(2020, 8), 30, 80, 90],
+            [new Date(2020, 9), 70, 83, 85],
+            [new Date(2020, 10), 65, 70, 73],
+            [new Date(2020, 11), 50, 72, 65],
           ]}
+          formatters={{
+            type: 'DateFormat',
+            column: 0,
+            options: {
+              pattern: 'MMM yyyy',
+            },
+          }}
           options={{
-            title: 'Monthly Coffee Production by Country',
-            vAxis: { title: 'Cups' },
-            hAxis: { title: 'Month' },
+            width: pathName === '/' ? 220 : 440,
+            height: pathName === '/' ? 330 : 500,
             seriesType: 'bars',
-            series: { 5: { type: 'line' } },
+            series: {
+              1: { type: 'line' },
+              2: { type: 'line' },
+            },
+            bar: { groupWidth: '100%' },
+            legend: { position: 'none' },
+            colors: ['#48AAED', '#77DBDB', '#FCB3B1'],
+            vAxes: {
+              0: {
+                title: 'TDT Collections ($ millions)',
+                titleTextStyle: { bold: true, italic: false },
+                textPosition: 'none',
+                minorGridlines: {
+                  color: '#fff',
+                },
+              },
+            },
+            hAxes: {
+              0: {
+                format: 'MMM',
+                gridlines: {
+                  color: '#fff',
+                },
+              },
+            },
           }}
           rootProps={{ 'data-testid': '1' }}
         />
-      </Card>
-    </section>
+      </div>
+      <div className={classNames('')} id="valueExpanded"></div>
+    </div>
   );
 };
 
