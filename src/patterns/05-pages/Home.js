@@ -51,18 +51,18 @@ const Home = ({ pathName }) => {
             {(pathName === '/' || pathName === '/confidence') && (
               <TourismConfidence pathName={pathName} />
             )}
-
-            <div
-              className={classNames(
-                'flex',
-                'flex-col',
-                'col-span-3',
-                'lg:col-span-1',
-                'bg-teal-dark',
-                'h-32'
-              )}>
-              Six (col-span-1) 32
-            </div>
+            {(pathName === '/' || pathName === '/sentiment') && (
+              <div
+                className={classNames(
+                  'flex',
+                  'flex-col',
+                  'col-span-3',
+                  'lg:col-span-1',
+                  'h-32'
+                )}>
+                Family Sentiment
+              </div>
+            )}
           </div>
         </main>
       </div>

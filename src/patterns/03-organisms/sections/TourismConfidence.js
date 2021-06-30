@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
+import { NavLink } from 'react-router-dom';
 
 const TourismConfidence = ({ pathName }) => {
   const [cardExpanded, setCardExpanded] = useState(false);
@@ -15,7 +16,8 @@ const TourismConfidence = ({ pathName }) => {
         'p-3',
         'rounded-lg',
         'shadow',
-        'bg-white'
+        'bg-white',
+        pathName === '/confidence' ? 'h-screen' : ''
       )}>
       <div
         className={classNames(
@@ -42,25 +44,46 @@ const TourismConfidence = ({ pathName }) => {
             Tourism Confidence
           </h3>
         </div>
-        <div className={classNames('self-end', 'flex', 'items-center')}>
-          <button
-            className={classNames(
-              `bg-teal-dark`,
-              `text-white`,
-              `rounded-tr-lg`,
-              `rounded-bl-lg`,
-              `focus:outline-none`,
-              `hover:bg-teal-light`,
-              `w-12`,
-              `h-12`,
-              `font-sans`,
-              'flex',
-              'justify-center',
-              'items-center'
-            )}>
-            <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
-          </button>
-        </div>
+        {pathName === '/' && (
+          <NavLink to="/confidence">
+            <div className={classNames('self-end', 'flex', 'items-center')}>
+              <button
+                className={classNames(
+                  `bg-teal-dark`,
+                  `text-white`,
+                  `rounded-tr-lg`,
+                  `rounded-bl-lg`,
+                  `focus:outline-none`,
+                  `hover:bg-teal-light`,
+                  `w-12`,
+                  `h-12`,
+                  `font-sans`,
+                  'flex',
+                  'justify-center',
+                  'items-center'
+                )}>
+                <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
+              </button>
+            </div>
+          </NavLink>
+        )}
+        {pathName === '/confidence' && (
+          <NavLink to="">
+            <div className={classNames('self-end', 'flex', 'items-center')}>
+              <button
+                className={classNames(
+                  `rounded-bl-lg`,
+                  `w-12`,
+                  `h-12`,
+                  'flex',
+                  'justify-center',
+                  'items-center'
+                )}>
+                <Icon color="Navy Sky" size="Small" type="ThreeDots" />
+              </button>
+            </div>
+          </NavLink>
+        )}
       </div>
       <p
         className={classNames(

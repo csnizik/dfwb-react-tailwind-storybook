@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-
+import { NavLink } from 'react-router-dom';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
 
@@ -16,7 +16,8 @@ const WaterAdventures = ({ pathName }) => {
         'p-3',
         'rounded-lg',
         'shadow',
-        'bg-white'
+        'bg-white',
+        pathName === '/water' ? 'h-screen' : ''
       )}>
       <div
         className={classNames(
@@ -43,25 +44,46 @@ const WaterAdventures = ({ pathName }) => {
             Water Adventures
           </h3>
         </div>
-        <div className={classNames('self-end', 'flex', 'items-center')}>
-          <button
-            className={classNames(
-              `bg-teal-dark`,
-              `text-white`,
-              `rounded-tr-lg`,
-              `rounded-bl-lg`,
-              `focus:outline-none`,
-              `hover:bg-teal-light`,
-              `w-12`,
-              `h-12`,
-              `font-sans`,
-              'flex',
-              'justify-center',
-              'items-center'
-            )}>
-            <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
-          </button>
-        </div>
+        {pathName === '/' && (
+          <NavLink to="/water">
+            <div className={classNames('self-end', 'flex', 'items-center')}>
+              <button
+                className={classNames(
+                  `bg-teal-dark`,
+                  `text-white`,
+                  `rounded-tr-lg`,
+                  `rounded-bl-lg`,
+                  `focus:outline-none`,
+                  `hover:bg-teal-light`,
+                  `w-12`,
+                  `h-12`,
+                  `font-sans`,
+                  'flex',
+                  'justify-center',
+                  'items-center'
+                )}>
+                <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
+              </button>
+            </div>
+          </NavLink>
+        )}
+        {pathName === '/water' && (
+          <NavLink to="">
+            <div className={classNames('self-end', 'flex', 'items-center')}>
+              <button
+                className={classNames(
+                  `rounded-bl-lg`,
+                  `w-12`,
+                  `h-12`,
+                  'flex',
+                  'justify-center',
+                  'items-center'
+                )}>
+                <Icon color="Navy Sky" size="Small" type="ThreeDots" />
+              </button>
+            </div>
+          </NavLink>
+        )}
       </div>
       <p
         className={classNames(

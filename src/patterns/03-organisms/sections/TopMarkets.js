@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 import Icon from '../../01-atoms/images/Icon/Icon';
+import { NavLink } from 'react-router-dom';
 
 const TopMarkets = ({ pathName }) => {
   const [cardExpanded, setCardExpanded] = useState(false);
@@ -15,7 +16,8 @@ const TopMarkets = ({ pathName }) => {
         'p-3',
         'rounded-lg',
         'shadow',
-        'bg-white'
+        'bg-white',
+        pathName === '/markets' ? 'h-screen' : ''
       )}>
       <div
         className={classNames(
@@ -25,7 +27,6 @@ const TopMarkets = ({ pathName }) => {
           'rounded-t-lg',
           'min-w-full',
           'justify-between'
-
         )}>
         <div
           className={classNames(
@@ -41,25 +42,46 @@ const TopMarkets = ({ pathName }) => {
           <Icon size="small" color="Navy Sky" type="Network" />
           <h3 className={classNames('hed-3', 'text-blue-dark')}>Top Markets</h3>
         </div>
-        <div className={classNames('self-end', 'flex', 'items-center')}>
-          <button
-            className={classNames(
-              `bg-teal-dark`,
-              `text-white`,
-              `rounded-tr-lg`,
-              `rounded-bl-lg`,
-              `focus:outline-none`,
-              `hover:bg-teal-light`,
-              `w-12`,
-              `h-12`,
-              `font-sans`,
-              'flex',
-              'justify-center',
-              'items-center'
-            )}>
-            <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
-          </button>
-        </div>
+        {pathName === '/' && (
+          <NavLink to="/markets">
+            <div className={classNames('self-end', 'flex', 'items-center')}>
+              <button
+                className={classNames(
+                  `bg-teal-dark`,
+                  `text-white`,
+                  `rounded-tr-lg`,
+                  `rounded-bl-lg`,
+                  `focus:outline-none`,
+                  `hover:bg-teal-light`,
+                  `w-12`,
+                  `h-12`,
+                  `font-sans`,
+                  'flex',
+                  'justify-center',
+                  'items-center'
+                )}>
+                <Icon color="Navy Sky" size="Small" type="MagnifyingGlass" />
+              </button>
+            </div>
+          </NavLink>
+        )}
+        {pathName === '/markets' && (
+          <NavLink to="">
+          <div className={classNames('self-end', 'flex', 'items-center')}>
+            <button
+              className={classNames(
+                `rounded-bl-lg`,
+                `w-12`,
+                `h-12`,
+                'flex',
+                'justify-center',
+                'items-center'
+              )}>
+              <Icon color="Navy Sky" size="Small" type="ThreeDots" />
+            </button>
+          </div>
+        </NavLink>
+        )}
       </div>
       <p
         className={classNames(
