@@ -53,10 +53,12 @@ const FamilySentiment = ({ pathName }) => {
           'rounded-lg',
           'flex',
           'flex-row',
+          'pr-4',
           'items-center',
           'space-x-4',
           'shadow',
-          pathName === '/' ? 'w-full' : 'w-96'
+          'w-96',
+          'h-24'
         )}>
         <div
           className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
@@ -77,7 +79,13 @@ const FamilySentiment = ({ pathName }) => {
             </ControlBar>
           </Player>
         </div>
-        <h3 className={classNames('hed3', 'w-48', 'text-overflow: ellipsis')}>
+        <h3
+          className={classNames(
+            'hed3',
+            'w-48',
+            'text-overflow: ellipsis',
+            'leading-tight'
+          )}>
           Mom Panel Product Test Image is great
         </h3>
       </div>
@@ -87,10 +95,12 @@ const FamilySentiment = ({ pathName }) => {
           'rounded-lg',
           'flex',
           'flex-row',
+          'pr-4',
           'items-center',
           'space-x-4',
           'shadow',
-          pathName === '/' ? 'w-full' : 'w-96'
+          'w-96',
+          'h-24'
         )}>
         <div
           className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
@@ -111,7 +121,13 @@ const FamilySentiment = ({ pathName }) => {
             </ControlBar>
           </Player>
         </div>
-        <h3 className={classNames('hed3', 'w-48', 'text-overflow: ellipsis')}>
+        <h3
+          className={classNames(
+            'hed3',
+            'w-48',
+            'text-overflow: ellipsis',
+            'leading-tight'
+          )}>
           Atlanta Mom Feedback
         </h3>
       </div>
