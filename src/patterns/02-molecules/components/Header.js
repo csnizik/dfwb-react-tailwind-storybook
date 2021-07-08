@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import UserMenu from '../navigation/UserMenu/UserMenu';
 
 function Header({ pathName }) {
   const pageName = (pathName) => {
@@ -26,11 +27,10 @@ function Header({ pathName }) {
         'static',
         'top-0',
         'p-4',
-        '',
         'sm:px-6',
-        'bg-white',
+        'bg-white-dark',
         'sm:bg-white-dark',
-        'z-50',
+        'z-10'
       )}>
       <div
         className={classNames(
@@ -48,49 +48,19 @@ function Header({ pathName }) {
           'pr-4',
           'sm:pr-0',
           'shadow-sm',
-          'sm:shadow-none',
+          'bg-white',
+          'sm:bg-white-dark',
+          'sm:shadow-none'
         )}>
         <h1 className={classNames('hed1', 'text-black', 'hidden', 'sm:block')}>
           {pageName(pathName)}
         </h1>
-        <div
-          className={classNames(
-            'bg-white',
-            'flex',
-            'justify-self-end',
-            'rounded-full',
-            'border',
-            'border-gray-300',
-            'space-x-4',
-            'px-1',
-            'py-1',
-            'items-center',
-            'truncate',
-            'text-xs',
-            'sm:text-base'
-          )}>
-          <div
-            className={classNames(
-              'w-6',
-              'sm:w-8',
-              'h-6',
-              'sm:h-8',
-              'py-1',
-              'px-1',
-              'rounded-full',
-              'bg-blue-dark',
-              'text-white',
-              'mr-2',
-              'flex',
-              'items-center',
-              'justify-center'
-            )}>
-            FL
-          </div>
-          First Last
-        </div>
+        <UserMenu />
+
       </div>
-      <div id="mobileTitle" className={classNames('block', 'sm:hidden')}>
+      <div
+        id="mobileTitle"
+        className={classNames('block', 'bg-white-dark', 'sm:hidden')}>
         <h1 className={classNames('hed1', 'text-black')}>
           {pageName(pathName)}
         </h1>
