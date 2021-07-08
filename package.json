@@ -14,7 +14,7 @@
     "classnames": "^2.2.6",
     "craco": "0.0.3",
     "postcss": "^7",
-    "react": "^17.0.1",
+    "react": "^16.0.0",
     "react-dom": "^17.0.1",
     "react-google-charts": "^3.0.15",
     "react-router-dom": "^5.2.0",
