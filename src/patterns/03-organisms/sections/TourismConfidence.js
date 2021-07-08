@@ -30,7 +30,7 @@ const TourismConfidence = ({ pathName }) => {
           'min-w-full',
           'justify-between'
         )}>
-        <div
+        <NavLink to="/confidence"
           className={classNames(
             'pt-4',
             'pl-4',
@@ -45,13 +45,13 @@ const TourismConfidence = ({ pathName }) => {
           <h3 className={classNames('hed-3', 'text-blue-dark')}>
             Tourism Confidence
           </h3>
-        </div>
+        </NavLink>
         {pathName === '/' && (
           <NavLink to="/confidence">
             <div className={classNames('self-end', 'flex', 'items-center')}>
               <button
                 className={classNames(
-                  `bg-teal-dark`,
+                  `bg-teal`,
                   `text-white`,
                   `rounded-tr-lg`,
                   `rounded-bl-lg`,

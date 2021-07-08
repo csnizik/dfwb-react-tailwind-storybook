@@ -30,7 +30,7 @@ const ValueGap = ({ pathName }) => {
           'min-w-full',
           'justify-between'
         )}>
-        <div
+        <NavLink to="/value"
           className={classNames(
             'pt-4',
             'pl-4',
@@ -43,13 +43,13 @@ const ValueGap = ({ pathName }) => {
           )}>
           <Icon size="small" color="Navy Sky" type="Graph" />
           <h3 className={classNames('hed-3', 'text-blue-dark')}>Value Gap</h3>
-        </div>
+        </NavLink>
         {pathName === '/' && (
           <NavLink to="/value">
             <div className={classNames('self-end', 'flex', 'items-center')}>
               <button
                 className={classNames(
-                  `bg-teal-dark`,
+                  `bg-teal`,
                   `text-white`,
                   `rounded-tr-lg`,
                   `rounded-bl-lg`,

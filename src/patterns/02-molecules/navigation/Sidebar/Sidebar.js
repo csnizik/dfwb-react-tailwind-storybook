@@ -73,9 +73,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen, pathName }) {
           'duration-200',
           'ease-in-out',
           'bg-blue-dark',
-          'z-40',
+          'z-30',
           'flex',
           'flex-col',
+          'space-y-6',
           'justify-start'
         )}>
         <div
@@ -364,13 +365,57 @@ function Sidebar({ sidebarOpen, setSidebarOpen, pathName }) {
           </ul>
           <div
             className={classNames(
+              'flex',
+              'flex-col',
+              'pt-8',
+              'mx-2',
+              'items-center',
+              'justify-center'
+            )}>
+            <p className={classNames('text-white', 'hidden', 'sm:block')}>
+              PDF Report
+            </p>
+            <p
+              className={classNames(
+                'text-white',
+                'font-light',
+                'hidden',
+                'sm:block'
+              )}>
+              Download the monthly report
+            </p>
+            <button>
+              <div
+                className={classNames(
+                  'h-12',
+                  'w-12',
+                  'sm:w-48',
+                  'bg-teal',
+                  'rounded-full',
+                  'flex',
+                  'justify-center',
+                  'items-center',
+                  'ring-0',
+                  'sm:py-7',
+                  'sm:px-5',
+                  'sm:mt-3',
+                  'sm:space-between',
+                  'sm:space-x-3',
+                )}>
+                <p className={classNames('hidden', 'sm:block')}>Download</p>
+                <Icon size="m" type="Download" />
+              </div>
+            </button>
+          </div>
+          <div
+            className={classNames(
               'flex-grow',
               'flex',
               'flex-col',
               'justify-end',
               'p-4'
             )}>
-            <div
+            <button
               id="sidebarToggle"
               ref={trigger}
               className={classNames(
@@ -395,7 +440,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen, pathName }) {
                 onClick={() => setSidebarOpen(!sidebarOpen)}>
                 <Icon type="SlideRight" />
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import Sidebar from '../02-molecules/navigation/Sidebar';
-// import UserMenu from '../02-molecules/blocks/UserMenu';
 import Header from '../02-molecules/components/Header';
 import AtAGlance from '../03-organisms/sections/AtAGlance';
 import TopMarkets from '../03-organisms/sections/TopMarkets';
 import WaterAdventures from '../03-organisms/sections/WaterAdventures';
 import ValueGap from '../03-organisms/sections/ValueGap';
 import TourismConfidence from '../03-organisms/sections/TourismConfidence';
+import FamilySentiment from '../03-organisms/sections/FamilySentiment';
 
 const Home = ({ pathName }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -33,7 +33,6 @@ const Home = ({ pathName }) => {
           'overflow-x-hidden',
           'bg-white-dark'
         )}>
-        {/* <UserMenu /> TODO: create UserMenu component */}
         <Header pathName={pathName} />
         <main>
           <div className={classNames('m-6', 'grid', 'grid-cols-3', 'gap-6')}>
@@ -52,16 +51,7 @@ const Home = ({ pathName }) => {
               <TourismConfidence pathName={pathName} />
             )}
             {(pathName === '/' || pathName === '/sentiment') && (
-              <div
-                className={classNames(
-                  'flex',
-                  'flex-col',
-                  'col-span-3',
-                  'lg:col-span-1',
-                  'h-32'
-                )}>
-                Family Sentiment
-              </div>
+              <FamilySentiment pathName={pathName} />
             )}
           </div>
         </main>
