@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/dfwb-react-tailwind-storybook/static/css/main.fc88a7f8.chunk.css",
+    "main.js": "/dfwb-react-tailwind-storybook/static/js/main.05824c9b.chunk.js",
+    "main.js.map": "/dfwb-react-tailwind-storybook/static/js/main.05824c9b.chunk.js.map",
+    "runtime-main.js": "/dfwb-react-tailwind-storybook/static/js/runtime-main.6ce279a6.js",
+    "runtime-main.js.map": "/dfwb-react-tailwind-storybook/static/js/runtime-main.6ce279a6.js.map",
+    "static/css/2.e3ba24b3.chunk.css": "/dfwb-react-tailwind-storybook/static/css/2.e3ba24b3.chunk.css",
+    "static/js/2.9aa6533c.chunk.js": "/dfwb-react-tailwind-storybook/static/js/2.9aa6533c.chunk.js",
+    "static/js/2.9aa6533c.chunk.js.map": "/dfwb-react-tailwind-storybook/static/js/2.9aa6533c.chunk.js.map",
+    "index.html": "/dfwb-react-tailwind-storybook/index.html",
+    "static/css/2.e3ba24b3.chunk.css.map": "/dfwb-react-tailwind-storybook/static/css/2.e3ba24b3.chunk.css.map",
+    "static/css/main.fc88a7f8.chunk.css.map": "/dfwb-react-tailwind-storybook/static/css/main.fc88a7f8.chunk.css.map",
+    "static/js/2.9aa6533c.chunk.js.LICENSE.txt": "/dfwb-react-tailwind-storybook/static/js/2.9aa6533c.chunk.js.LICENSE.txt",
+    "static/media/DestinFWBLogo.9bb6e41d.svg": "/dfwb-react-tailwind-storybook/static/media/DestinFWBLogo.9bb6e41d.svg",
+    "static/media/arrow-down.c7cad5ef.svg": "/dfwb-react-tailwind-storybook/static/media/arrow-down.c7cad5ef.svg",
+    "static/media/arrow-up.62c6e61e.svg": "/dfwb-react-tailwind-storybook/static/media/arrow-up.62c6e61e.svg",
+    "static/media/dashboard.bbce4918.svg": "/dfwb-react-tailwind-storybook/static/media/dashboard.bbce4918.svg",
+    "static/media/download.ee74cb4e.svg": "/dfwb-react-tailwind-storybook/static/media/download.ee74cb4e.svg",
+    "static/media/graph.d131409f.svg": "/dfwb-react-tailwind-storybook/static/media/graph.d131409f.svg",
+    "static/media/magnifying-glass.146cc397.svg": "/dfwb-react-tailwind-storybook/static/media/magnifying-glass.146cc397.svg",
+    "static/media/network.3452b248.svg": "/dfwb-react-tailwind-storybook/static/media/network.3452b248.svg",
+    "static/media/pencil.fb02254a.svg": "/dfwb-react-tailwind-storybook/static/media/pencil.fb02254a.svg",
+    "static/media/pie.1987ab2b.svg": "/dfwb-react-tailwind-storybook/static/media/pie.1987ab2b.svg",
+    "static/media/pin.8dac743a.svg": "/dfwb-react-tailwind-storybook/static/media/pin.8dac743a.svg",
+    "static/media/play.ae5b2c37.svg": "/dfwb-react-tailwind-storybook/static/media/play.ae5b2c37.svg",
+    "static/media/pointer.b2817c6e.svg": "/dfwb-react-tailwind-storybook/static/media/pointer.b2817c6e.svg",
+    "static/media/slide-left.97227424.svg": "/dfwb-react-tailwind-storybook/static/media/slide-left.97227424.svg",
+    "static/media/slide-right.c3bf0101.svg": "/dfwb-react-tailwind-storybook/static/media/slide-right.c3bf0101.svg",
+    "static/media/three-dots-vert.8ac1e526.svg": "/dfwb-react-tailwind-storybook/static/media/three-dots-vert.8ac1e526.svg",
+    "static/media/triangle.cf4e8561.svg": "/dfwb-react-tailwind-storybook/static/media/triangle.cf4e8561.svg",
+    "static/media/video.c3203452.svg": "/dfwb-react-tailwind-storybook/static/media/video.c3203452.svg",
+    "static/media/videoposter01.62cbddf5.png": "/dfwb-react-tailwind-storybook/static/media/videoposter01.62cbddf5.png",
+    "static/media/videoposter02.7b0bbaa0.png": "/dfwb-react-tailwind-storybook/static/media/videoposter02.7b0bbaa0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ce279a6.js",
+    "static/css/2.e3ba24b3.chunk.css",
+    "static/js/2.9aa6533c.chunk.js",
+    "static/css/main.fc88a7f8.chunk.css",
+    "static/js/main.05824c9b.chunk.js"
+  ]
+}
