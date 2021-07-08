@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import Sidebar from '../02-molecules/navigation/Sidebar';
-// import UserMenu from '../02-molecules/blocks/UserMenu';
 import Header from '../02-molecules/components/Header';
 import AtAGlance from '../03-organisms/sections/AtAGlance';
 import TopMarkets from '../03-organisms/sections/TopMarkets';
@@ -33,7 +32,7 @@ const Home = ({ pathName }) => {
           'overflow-x-hidden',
           'bg-white-dark'
         )}>
-        {/* <UserMenu /> TODO: create UserMenu component */}
+        
         <Header pathName={pathName} />
         <main>
           <div className={classNames('m-6', 'grid', 'grid-cols-3', 'gap-6')}>
