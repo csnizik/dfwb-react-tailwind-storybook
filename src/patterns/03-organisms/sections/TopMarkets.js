@@ -30,7 +30,8 @@ const TopMarkets = ({ pathName }) => {
           'min-w-full',
           'justify-between'
         )}>
-        <div
+        
+        <NavLink to="/markets"
           className={classNames(
             'pt-4',
             'pl-4',
@@ -43,7 +44,7 @@ const TopMarkets = ({ pathName }) => {
           )}>
           <Icon size="small" color="Navy Sky" type="Network" />
           <h3 className={classNames('hed-3', 'text-blue-dark')}>Top Markets</h3>
-        </div>
+        </NavLink>
         {pathName === '/' && (
           <NavLink to="/markets">
             <div className={classNames('self-end', 'flex', 'items-center')}>

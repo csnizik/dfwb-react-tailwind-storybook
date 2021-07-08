@@ -30,7 +30,7 @@ const WaterAdventures = ({ pathName }) => {
           'min-w-full',
           'justify-between'
         )}>
-        <div
+        <NavLink to="/water"
           className={classNames(
             'pt-4',
             'pl-4',
@@ -45,7 +45,7 @@ const WaterAdventures = ({ pathName }) => {
           <h3 className={classNames('hed-3', 'text-blue-dark')}>
             Water Adventures
           </h3>
-        </div>
+        </NavLink>
         {pathName === '/' && (
           <NavLink to="/water">
             <div className={classNames('self-end', 'flex', 'items-center')}>

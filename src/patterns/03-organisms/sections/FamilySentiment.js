@@ -13,6 +13,8 @@ import {
   VolumeBar,
 } from 'video-react';
 import { Link, NavLink } from 'react-router-dom';
+import PosterOne from '../../01-atoms/images/videoposter01.png';
+import PosterTwo from '../../01-atoms/images/videoposter02.png';
 
 import 'video-react/dist/video-react.css';
 
@@ -28,11 +30,21 @@ const FamilySentiment = ({ pathName }) => {
         pathName !== '/sentiment' ? 'lg:col-span-1' : '',
         pathName === '/sentiment' ? 'h-screen' : ''
       )}>
-      <div className={classNames('flex', 'space-x-4')}>
+      <div
+        className={classNames(
+          'flex',
+          'self-start',
+          'space-x-3',
+          'justify-center',
+          'items-center',
+          pathName === '/' ? 'visible' : 'invisible'
+        )}>
         <Icon size="small" color="Navy Sky" type="Video" />
-        <h3 className={classNames('hed-3', 'text-blue-dark')}>
-          Family Sentiment
-        </h3>
+        <NavLink to="/sentiment">
+          <h3 className={classNames('hed-3', 'text-blue-dark')}>
+            Family Sentiment
+          </h3>
+        </NavLink>
       </div>
 
       <div
@@ -43,13 +55,14 @@ const FamilySentiment = ({ pathName }) => {
           'flex-row',
           'items-center',
           'space-x-4',
-          'shadow'
+          'shadow',
+          pathName === '/' ? 'w-full' : 'w-96'
         )}>
         <div
           className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
           <Player
             src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-            poster="http://placehold.it/360x220"
+            poster={PosterOne}
             height="220"
             muted>
             <BigPlayButton position="center" />
@@ -76,12 +89,14 @@ const FamilySentiment = ({ pathName }) => {
           'flex-row',
           'items-center',
           'space-x-4',
-          'shadow'
+          'shadow',
+          pathName === '/' ? 'w-full' : 'w-96'
         )}>
-        <div className={classNames('w-48', 'rounded-l-lg', 'overflow-hidden')}>
+        <div
+          className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
           <Player
             src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-            poster="http://placehold.it/360x220"
+            poster={PosterTwo}
             height="220"
             muted>
             <BigPlayButton position="center" />
