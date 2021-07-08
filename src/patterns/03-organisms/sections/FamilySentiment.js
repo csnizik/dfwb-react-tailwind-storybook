@@ -8,11 +8,9 @@ import {
   LoadingSpinner,
   BigPlayButton,
   FullscreenToggle,
-  VolumeMenuButton,
-  VolumeControl,
-  VolumeBar,
+  VolumeMenuButton
 } from 'video-react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PosterOne from '../../01-atoms/images/videoposter01.png';
 import PosterTwo from '../../01-atoms/images/videoposter02.png';
 
