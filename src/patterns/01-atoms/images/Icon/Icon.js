@@ -6,6 +6,7 @@ import './Icon.css';
 import { ReactComponent as ArrowDown } from './arrow-down.svg';
 import { ReactComponent as ArrowUp } from './arrow-up.svg';
 import { ReactComponent as Dashboard } from './dashboard.svg';
+import { ReactComponent as Download } from './download.svg';
 import { ReactComponent as Graph } from './graph.svg';
 import { ReactComponent as MagnifyingGlass } from './magnifying-glass.svg';
 import { ReactComponent as Network } from './network.svg';
@@ -106,6 +107,17 @@ const renderIcon = ({ type, size, color, classes, ...props }) => {
           )}
         />
       );
+  
+      case 'Download':
+        return (
+          <Download
+            className={classNames(
+              'fill-current',
+              iconSize(size),
+              iconColor(color)
+            )}
+          />
+        );
     case 'Graph':
       return (
         <Graph
