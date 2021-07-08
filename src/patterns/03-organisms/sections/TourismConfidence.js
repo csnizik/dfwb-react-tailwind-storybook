@@ -51,7 +51,7 @@ const TourismConfidence = ({ pathName }) => {
             <div className={classNames('self-end', 'flex', 'items-center')}>
               <button
                 className={classNames(
-                  `bg-teal-dark`,
+                  `bg-teal`,
                   `text-white`,
                   `rounded-tr-lg`,
                   `rounded-bl-lg`,
