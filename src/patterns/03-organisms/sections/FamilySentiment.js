@@ -54,11 +54,11 @@ const FamilySentiment = ({ pathName }) => {
           'flex',
           'flex-row',
           'pr-4',
+          'py-3',
           'items-center',
           'space-x-4',
           'shadow',
-          'w-96',
-          'h-24'
+          pathName === '/sentiment' ? 'w-96' : ''
         )}>
         <div
           className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
@@ -96,11 +96,11 @@ const FamilySentiment = ({ pathName }) => {
           'flex',
           'flex-row',
           'pr-4',
+          'py-3',
           'items-center',
           'space-x-4',
           'shadow',
-          'w-96',
-          'h-24'
+          pathName === '/sentiment' ? 'w-96' : ''
         )}>
         <div
           className={classNames('w-48', 'rounded-l-lg', 'overflow-y-hidden')}>
