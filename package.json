@@ -2,7 +2,7 @@
   "name": "rst-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://southleft.github.io/dfwb-react-tailwind-storybook",
+  "homepage": "/dfwb-react-tailwind-storybook",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@tailwindcss/postcss7-compat": "^2.0.3",
